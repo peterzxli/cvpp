@@ -16,7 +16,27 @@ CVPP is a C++ library forked from [Vitor Guizilini](https://bitbucket.org/vguizi
 	* **CPPrint** - Basic recording class, that uses [OpenCV](https://opencv.org/) to store visual representations of data as individual images or encoded video.
 
 ---------------------------------------------------------------------------------------  
-# *Installation*   
+
+## Content
+
+**[1. Installation](#heading--1)**
+
+  * [1.1. Markdown formatting cheatsheet](#heading--1-1)
+  * [1.2. Markdown formatting details](#heading--1-2)
+
+**[2. Extensions](#heading--2)**
+
+  * [2.1. Basic text formatting](#heading--2-1)
+
+      * [2.1.1. Not so basic text formatting](#heading--2-1-1)
+
+  * [2.2. Lists, Images, Code](#heading--2-2)
+  * [2.3. Special features](#heading--2-3)
+  
+**[3. TODO](#heading--3)**
+
+---------------------------------------------------------------------------------------
+# *Installation*  <a name="heading--1"/>
 
 The CVPP library was tested on macOS Catalina and Ubuntu 16.04, but it should compile fine in other distributions.
 
@@ -35,7 +55,7 @@ sudo apt-get install git cmake cmake-gui
 
 ```
 cd /path/to/cvpp_folder
-git clone https://bitbucket.org/vguizilini/cvpp
+git clone https://github.com/peterzxli/cvpp.git
 ```
 
 ##### INSTALL BASE DEPENDENCIES
