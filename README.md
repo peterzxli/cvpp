@@ -21,17 +21,19 @@ CVPP is a C++ library forked from [Vitor Guizilini](https://bitbucket.org/vguizi
 
 **[1. Installation](#heading--1)**
 
-  * [1.1. Markdown formatting cheatsheet](#heading--1-1)
-  * [1.2. Markdown formatting details](#heading--1-2)
+  * [1.1. Base Installation](#heading--1-1)
+  * [1.2. Test Base Installation](#heading--1-2)
 
 **[2. Extensions](#heading--2)**
 
-  * [2.1. Basic text formatting](#heading--2-1)
-
-      * [2.1.1. Not so basic text formatting](#heading--2-1-1)
-
-  * [2.2. Lists, Images, Code](#heading--2-2)
-  * [2.3. Special features](#heading--2-3)
+  * [2.1. CUDA (NVIDA GPU)](#heading--2-1)
+  * [2.2. MKL (Intel CPU)](#heading--2-2)
+  * [2.3. OpenCV](#heading--2-3)
+  * [2.4. ArrayFire (GPU Calculations)](#heading--2-4)
+  * [2.5. OpenGL (Graphical Interface)](#heading--2-5)
+  * [2.6. VLFeat (Support to VLFeat library)](#heading--2-6)  
+  * [2.7. NLOpt (Non-linear Optimization)](#heading--2-7)  
+  * [2.8. CURL (File Transfer)](#heading--2-8)  
   
 **[3. TODO](#heading--3)**
 
@@ -42,7 +44,7 @@ The CVPP library was tested on macOS Catalina and Ubuntu 16.04, but it should co
 
 From a fresh installation, do the following:
 
-### Base Installation
+### Base Installation <a name="heading--1-1"/>
 
 ##### INSTALL SYSTEM TOOLS
 
@@ -66,7 +68,7 @@ sudo apt-get install libboost-all-dev
 sudo apt-get install zlib1g-dev
 ```
 
-### Test Base Installation
+### Test Base Installation <a name="heading--1-2"/>
 
 ##### SET CVPP PATH
 
@@ -90,9 +92,9 @@ If you want more functionality, consider installing the following extensions (mo
 work if you have one or more of these extensions installed).
 
 -----------------------------------------------------------------------------------------
-# *Extensions*  
+# *Extensions* <a name="heading--2"/> 
 
-### CUDA (GPU calculations)
+### CUDA (GPU calculations) <a name="heading--2-1"/> 
 
 ##### INSTALL NVIDIA DRIVER
 
@@ -132,7 +134,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/nvvm/lib64
 ```
 
 -----------------------------------------------------------------------------------------
-### MKL (Faster CPU calculations)
+### MKL (Faster CPU calculations) <a name="heading--2-2"/> 
 
 ##### DOWNLOAD INTEL MKL
 
@@ -150,7 +152,7 @@ sudo ./install_GUI.sh
 [https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor]
 
 -----------------------------------------------------------------------------------------
-### OpenCV (Support to OpenCV library)
+### OpenCV (Support to OpenCV library) <a name="heading--2-3"/> 
 Note that only OpenCV 3.4.2 is supported for now.
 
 ##### DOWNLOAD OPENCV 3.4.2
@@ -218,7 +220,7 @@ set(CMAKE_OSX_SYSROOT /sdk/path)
 where ```/sdk/path``` is the output of ```xcrun --show-sdk-path```.
 
 -----------------------------------------------------------------------------------------
-### ArrayFire (GPU calculations)
+### ArrayFire (GPU Calculations) <a name="heading--2-4"/>
 
 ##### CLONE ARRAYFIRE REPOSITORY
 
@@ -248,7 +250,7 @@ sudo make install
 ```
 
 -----------------------------------------------------------------------------------------
-### OpenGL (Graphical interface) 
+### OpenGL (Graphical Interface) <a name="heading--2-5"/>
 
 ```
 sudo apt-get install libsdl2-dev freeglut3-dev libflann-dev
@@ -261,21 +263,21 @@ ln -s "$(xcrun --sdk macosx --show-sdk-path)/System/Library/Frameworks/OpenGL.fr
 ```
 
 -----------------------------------------------------------------------------------------
-### VLFeat (Support to VLFeat library) 
+### VLFeat (Support to VLFeat library) <a name="heading--2-6"/>
 
 ```
 sudo apt-get install libvlfeat-dev
 ```
 
 -----------------------------------------------------------------------------------------
-### NLOpt (Non-linear optimization) 
+### NLOpt (Non-linear Optimization) <a name="heading--2-7"/>
 
 ```
 sudo apt-get install libnlopt-dev
 ```
 
 -----------------------------------------------------------------------------------------
-### CURL (File transfer) 
+### CURL (File Transfer) <a name="heading--2-8"/>
 
 ```
 sudo apt-get install libcurl4-openssl-dev
