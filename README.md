@@ -139,15 +139,6 @@ Note that only OpenCV 3.4.2 is supported for now.
 
 Unzip both in the home directory.
 
-~~~
-# #### CLONE OPENCV REPOSITORIES
-
-# ```
-# git clone https://github.com/opencv/opencv.git
-# git clone https://github.com/opencv/opencv_contrib.git
-# ```
-~~~
-
 ##### RUN CMAKE FOR FIRST CONFIGURATION
 
 ```
@@ -218,6 +209,12 @@ sudo make install
 
 ```
 sudo apt-get install libsdl2-dev freeglut3-dev libflann-dev
+```
+
+Note the OpenGL is deprecated from MacOS 10.14 onwards. Here's my solution to get OpenGL working:
+```
+$ ln -s "$(xcrun --sdk macosx --show-sdk-path)/System/Library/Frameworks/OpenGL.framework/Headers" \
+/usr/local/include/OpenGL
 ```
 
 -----------------------------------------------------------------------------------------
