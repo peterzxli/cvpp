@@ -140,12 +140,12 @@ Note that only OpenCV 3.4.2 is supported for now.
 Unzip both in the home directory.
 
 ~~~
-##### CLONE OPENCV REPOSITORIES
+# #### CLONE OPENCV REPOSITORIES
 
-#```
-#git clone https://github.com/opencv/opencv.git
-#git clone https://github.com/opencv/opencv_contrib.git
-#```
+# ```
+# git clone https://github.com/opencv/opencv.git
+# git clone https://github.com/opencv/opencv_contrib.git
+# ```
 ~~~
 
 ##### RUN CMAKE FOR FIRST CONFIGURATION
