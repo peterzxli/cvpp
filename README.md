@@ -1,18 +1,22 @@
 ## CVPP  -  Computer Vision for C++ ##
 
 ---------------------------------------------------------------------------------------  
-### Credit ###
+CVPP is a home-grown C++ library that focuses on easy prototyping and testing. It introduces new classes that wrap around the API of various well-known open-source libraries and provide useful functionalities, that significantly increase productivity without compromising performance.
 
-This repo is forked from Vitor Campanholo Guizilini [https://bitbucket.org/vguizilini/cvpp/src/master/] with the following additional enhancements:
-
-### TODO ###
-- [ ] Compatible with OpenCV 4
+1. Containers - The base classes of CVPP, acting as building blocks for everything else. They perform operations using inherited methods and implements new ones that facilitate common calculations found in scientific research.
+	* Matrix - Basic fixed-size data storage class, that maintains a pointer to an Eigen::Matrix structure.
+	* Vector - Basic dynamic-size data storage class, that maintains a pointer to a std::vector structure.
+	* Image - Basic image data storage class, that maintains a pointer to a cv::Mat structure.
+	* Device - Basic GPU data storage class, that maintains a pointer to an arrayfire::array structure.
+2. Interfaces - The input/output classes of CVPP, managing data visualization, user interaction and access to peripherals.
+	* CPPlot - Basic plotting class, that uses OpenGL and SDL2 to generate environments for image reproduction,  2D/3D matlab-like graphics and 3D virtual worlds.
+	* CPPture - Basic camera class, that uses OpenCV to access USB devices and GStreamer to access network streams.
+	* CPPrint - Basic recording class, that uses OpenCV to store visual representations of data as individual images or encoded video.
 
 ---------------------------------------------------------------------------------------  
 # *Installation*   
----------------------------------------------------------------------------------------
 
-The CVPP library was tested on Ubuntu 16.04 and MacOS, but it should compile fine in other distributions.
+The CVPP library was tested on MacOS, but it should compile fine in other distributions.
 
 From a fresh installation, do the following:
 
@@ -224,6 +228,15 @@ sudo apt-get install libnlopt-dev
 sudo apt-get install libcurl4-openssl-dev
 ```
 
+---------------------------------------------------------------------------------------  
+### Credit ###
+
+This repo is forked from Vitor Campanholo Guizilini [https://bitbucket.org/vguizilini/cvpp/src/master/] with the following additional enhancements:
+
+### TODO ###
+- [ ] Compatible with OpenCV 4
+- [ ] Test on Ubuntu 16.04
+- [x] Installation tips for MacOS
 
 
 
