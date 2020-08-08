@@ -3,7 +3,7 @@
 ---------------------------------------------------------------------------------------  
 ### Credit ###
 
-This repo is forked from Vitor Campanholo Guizilini [https://bitbucket.org/vguizilini/cvpp/src/master/](Link URL) with the following additional enhancements:
+This repo is forked from Vitor Campanholo Guizilini [https://bitbucket.org/vguizilini/cvpp/src/master/] with the following additional enhancements:
 
 ### TODO ###
 - [ ] Compatible with OpenCV 4
