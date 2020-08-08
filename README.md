@@ -18,7 +18,7 @@ CVPP is a C++ library forked from [Vitor Campanholo Guizilini](https://bitbucket
 ---------------------------------------------------------------------------------------  
 # *Installation*   
 
-The CVPP library was tested on MacOS, but it should compile fine in other distributions.
+The CVPP library was tested on MacOS and Ubuntu, but it should compile fine in other distributions.
 
 From a fresh installation, do the following:
 
@@ -70,6 +70,8 @@ If you want more functionality, consider installing the following extensions (mo
 work if you have one or more of these extensions installed).
 
 -----------------------------------------------------------------------------------------
+# *Extensions*  
+
 ### CUDA (GPU calculations)
 
 ##### INSTALL NVIDIA DRIVER
@@ -125,7 +127,7 @@ sudo ./install_GUI.sh
 
 ##### DETERMINE LINKING LIBRARIES
 
-[https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor](Link URL)
+[https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor]
 
 -----------------------------------------------------------------------------------------
 ### OpenCV (Support to OpenCV library)
@@ -231,10 +233,6 @@ sudo apt-get install libcurl4-openssl-dev
 ```
 
 ---------------------------------------------------------------------------------------  
-### Credit ###
-
-This repo is forked from Vitor Campanholo Guizilini [https://bitbucket.org/vguizilini/cvpp/src/master/] with the following additional enhancements:
-
 ### TODO ###
 - [ ] Compatible with OpenCV 4
 - [ ] Test on Ubuntu 16.04
