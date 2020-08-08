@@ -5,15 +5,15 @@
 CVPP is a C++ library forked from [Vitor Guizilini](https://bitbucket.org/vguizilini/cvpp/src/master/) that focuses on easy prototyping and testing. It introduces new classes that wrap around the API of various well-known open-source libraries and provide useful functionalities, that significantly increase productivity without compromising performance.
 
 1. **Containers** - The base classes of CVPP, acting as building blocks for everything else. They perform operations using inherited methods and implements new ones that facilitate common calculations found in scientific research.
-	* **Matrix** - Basic fixed-size data storage class, that maintains a pointer to an Eigen::Matrix structure.
-	* **Vector** - Basic dynamic-size data storage class, that maintains a pointer to a std::vector structure.
-	* **Image** - Basic image data storage class, that maintains a pointer to a cv::Mat structure.
-	* **Device** - Basic GPU data storage class, that maintains a pointer to an arrayfire::array structure.
+	* **Matrix** - Basic fixed-size data storage class, that maintains a pointer to an [Eigen::Matrix](http://eigen.tuxfamily.org/index.php?title=Main_Page) structure.
+	* **Vector** - Basic dynamic-size data storage class, that maintains a pointer to a [std::vector](https://en.cppreference.com/w/cpp/container/vector) structure.
+	* **Image** - Basic image data storage class, that maintains a pointer to a [cv::Mat](https://docs.opencv.org/3.0-beta/doc/tutorials/core/mat_the_basic_image_container/mat_the_basic_image_container.html) structure.
+	* **Device** - Basic GPU data storage class, that maintains a pointer to an [arrayfire::array](http://arrayfire.org/docs/group__construct__mat.htm) structure.
 	
 2. **Interfaces** - The input/output classes of CVPP, managing data visualization, user interaction and access to peripherals.
-	* **CPPlot** - Basic plotting class, that uses OpenGL and SDL2 to generate environments for image reproduction,  2D/3D matlab-like graphics and 3D virtual worlds.
-	* **CPPture** - Basic camera class, that uses OpenCV to access USB devices and GStreamer to access network streams.
-	* **CPPrint** - Basic recording class, that uses OpenCV to store visual representations of data as individual images or encoded video.
+	* **CPPlot** - Basic plotting class, that uses [OpenGL](https://www.khronos.org/opengl/wiki/Getting_Started) and [SDL2](https://www.libsdl.org/) to generate environments for image reproduction,  2D/3D [MATLAB](https://www.mathworks.com/products/matlab.html-like graphics and 3D virtual worlds.
+	* **CPPture** - Basic camera class, that uses [OpenCV](https://opencv.org/) to access USB devices and [GStreamer](https://gstreamer.freedesktop.org/) to access network streams.
+	* **CPPrint** - Basic recording class, that uses [OpenCV](https://opencv.org/) to store visual representations of data as individual images or encoded video.
 
 ---------------------------------------------------------------------------------------  
 # *Installation*   
@@ -179,9 +179,9 @@ sudo make install
 
 Make tesseract-includes availble by defining export ```CPATH="/usr/local/Cellar/tesseract/4.0.0_1/include"``` and then run the build command.
 
-2. **Using ```<cmath>``` headers yield error: no member named 'signbit' in the global namespace (macOS)**
+2. **Using ```<cmath>``` headers yield ```error: no member named 'signbit' in the global namespace```**
 	
-Use the CommandLineTools SDK rather than the XCode.app SDK
+This occurs when building OpenCV on macOS. Please use the CommandLineTools SDK rather than the XCode.app SDK
 ```
 #Check the current sdk
 xcrun --show-sdk-path
@@ -265,7 +265,7 @@ sudo apt-get install libcurl4-openssl-dev
 # *TODO* 
 - [ ] Compatible with OpenCV 4
 - [ ] Test on Ubuntu 16.04
-- [ ] Compatible with Metal on MacOS
+- [ ] Compatible with Metal on macOS
 - [x] Installation tips for MacOS
 
 
