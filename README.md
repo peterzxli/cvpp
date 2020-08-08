@@ -2,7 +2,7 @@
 ### *Generic Machine Learning, Computer Vision and Robotics Library for C++*
 
 ---------------------------------------------------------------------------------------  
-CVPP is a C++ library forked from [Vitor Campanholo Guizilini](https://bitbucket.org/vguizilini/cvpp/src/master/) that focuses on easy prototyping and testing. It introduces new classes that wrap around the API of various well-known open-source libraries and provide useful functionalities, that significantly increase productivity without compromising performance.
+CVPP is a C++ library forked from [Vitor Guizilini](https://bitbucket.org/vguizilini/cvpp/src/master/) that focuses on easy prototyping and testing. It introduces new classes that wrap around the API of various well-known open-source libraries and provide useful functionalities, that significantly increase productivity without compromising performance.
 
 1. **Containers** - The base classes of CVPP, acting as building blocks for everything else. They perform operations using inherited methods and implements new ones that facilitate common calculations found in scientific research.
 	* **Matrix** - Basic fixed-size data storage class, that maintains a pointer to an Eigen::Matrix structure.
@@ -131,13 +131,22 @@ sudo ./install_GUI.sh
 
 -----------------------------------------------------------------------------------------
 ### OpenCV (Support to OpenCV library)
+Note that only OpenCV 3.4.2 is supported for now.
 
+##### DOWNLOAD OPENCV 3.4.2
+1. OpenCV 3.4.2: [https://github.com/opencv/opencv/releases/tag/3.4.2]
+2. OpenCV Contrib 3.4.2: [https://github.com/opencv/opencv_contrib/releases/tag/3.4.2]
+
+Unzip both in the home directory.
+
+[//]: #(
 ##### CLONE OPENCV REPOSITORIES
 
 ```
 git clone https://github.com/opencv/opencv.git
 git clone https://github.com/opencv/opencv_contrib.git
 ```
+)
 
 ##### RUN CMAKE FOR FIRST CONFIGURATION
 
@@ -233,7 +242,7 @@ sudo apt-get install libcurl4-openssl-dev
 ```
 
 ---------------------------------------------------------------------------------------  
-### TODO ###
+# *TODO* 
 - [ ] Compatible with OpenCV 4
 - [ ] Test on Ubuntu 16.04
 - [ ] Compatible with Metal on MacOS
