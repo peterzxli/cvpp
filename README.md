@@ -11,7 +11,7 @@ CVPP is a C++ library forked from [Vitor Guizilini](https://bitbucket.org/vguizi
 	* **Device** - Basic GPU data storage class, that maintains a pointer to an [arrayfire::array](http://arrayfire.org/docs/group__construct__mat.htm) structure.
 	
 2. **Interfaces** - The input/output classes of CVPP, managing data visualization, user interaction and access to peripherals.
-	* **CPPlot** - Basic plotting class, that uses [OpenGL](https://www.khronos.org/opengl/wiki/Getting_Started) and [SDL2](https://www.libsdl.org/) to generate environments for image reproduction,  2D/3D [MATLAB](https://www.mathworks.com/products/matlab.html-like graphics and 3D virtual worlds.
+	* **CPPlot** - Basic plotting class, that uses [OpenGL](https://www.khronos.org/opengl/wiki/Getting_Started) and [SDL2](https://www.libsdl.org/) to generate environments for image reproduction,  2D/3D [MATLAB](https://www.mathworks.com/products/matlab.html-like) graphics and 3D virtual worlds.
 	* **CPPture** - Basic camera class, that uses [OpenCV](https://opencv.org/) to access USB devices and [GStreamer](https://gstreamer.freedesktop.org/) to access network streams.
 	* **CPPrint** - Basic recording class, that uses [OpenCV](https://opencv.org/) to store visual representations of data as individual images or encoded video.
 
