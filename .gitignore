@@ -1,0 +1,9 @@
+*~
+*.user
+*.bag
+*.autosave
+build/
+projects/
+TODO/
+ZZZ/
+*backup*

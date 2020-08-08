@@ -1,0 +1,16 @@
+#!/bin/bash        
+
+for DIR in *; do
+    if [[ -d $DIR ]]; then
+		cd $DIR/build
+		echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ MAKING" $DIR "DEMO"
+		cmake ..
+		make -j8
+		cd ../..
+    fi
+done
+
+
+            
+
+

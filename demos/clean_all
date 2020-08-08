@@ -1,0 +1,15 @@
+#!/bin/bash        
+        
+for DIR in *; do
+    if [[ -d $DIR ]]; then
+		cd $DIR
+		rm -rf build
+		echo "************************************ CLEANING" $DIR "DEMO"
+		mkdir build
+		cd ..
+	fi
+done
+
+            
+
+
