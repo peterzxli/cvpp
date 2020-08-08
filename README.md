@@ -18,7 +18,7 @@ CVPP is a C++ library forked from [Vitor Guizilini](https://bitbucket.org/vguizi
 ---------------------------------------------------------------------------------------  
 # *Installation*   
 
-The CVPP library was tested on MacOS and Ubuntu, but it should compile fine in other distributions.
+The CVPP library was tested on macOS Catalina and Ubuntu 16.04, but it should compile fine in other distributions.
 
 From a fresh installation, do the following:
 
@@ -174,6 +174,29 @@ make
 sudo make install
 ```
 
+##### TROUBLESHOOTING
+1. fatal error: ```'tesseract/baseapi.h'``` file not found
+
+Make tesseract-includes availble by defining export CPATH="/usr/local/Cellar/tesseract/4.0.0_1/include" and then run the build command.
+
+2. Using ```<cmath>``` headers yield error: no member named 'signbit' in the global namespace (macOS)
+	
+Use the CommandLineTools SDK rather than the XCode.app SDK
+```
+#Check the current sdk
+xcrun --show-sdk-path
+
+#Change sdk
+sudo xcode-select -s /Library/Developer/CommandLineTools          #Using CommandLineTools SDK
+sudo xcode-select -s /Applications/Xcode.app/Contents/Developer   #Using XCode.app SDK
+```
+
+During CMake configuration, use
+```
+set(CMAKE_OSX_SYSROOT /sdk/path)
+```
+where ```/sdk/path``` is the output of ```xcrun --show-sdk-path```.
+
 -----------------------------------------------------------------------------------------
 ### ArrayFire (GPU calculations)
 
@@ -211,9 +234,9 @@ sudo make install
 sudo apt-get install libsdl2-dev freeglut3-dev libflann-dev
 ```
 
-Note the OpenGL is deprecated from MacOS 10.14 onwards. Here's my solution to get OpenGL working:
+Note the OpenGL is deprecated from macOS Catalina 10.14 onwards. Here's my solution to get OpenGL working:
 ```
-$ ln -s "$(xcrun --sdk macosx --show-sdk-path)/System/Library/Frameworks/OpenGL.framework/Headers" \
+ln -s "$(xcrun --sdk macosx --show-sdk-path)/System/Library/Frameworks/OpenGL.framework/Headers" \
 /usr/local/include/OpenGL
 ```
 
