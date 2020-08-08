@@ -1,11 +1,18 @@
 ## CVPP  -  Computer Vision for C++ ##
-### by Vitor Campanholo Guizilini ###
+
+---------------------------------------------------------------------------------------  
+### Credit ###
+
+This repo is forked from Vitor Campanholo Guizilini [https://bitbucket.org/vguizilini/cvpp/src/master/](Link URL) with the following additional enhancements:
+
+### TODO ###
+- [ ] Compatible with OpenCV 4
 
 ---------------------------------------------------------------------------------------  
 # *Installation*   
 ---------------------------------------------------------------------------------------
 
-The CVPP library was tested on Ubuntu 16.04, but it should compile fine in other distributions.
+The CVPP library was tested on Ubuntu 16.04 and MacOS, but it should compile fine in other distributions.
 
 From a fresh installation, do the following:
 
