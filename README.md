@@ -175,11 +175,11 @@ sudo make install
 ```
 
 ##### TROUBLESHOOTING
-1. fatal error: ```'tesseract/baseapi.h'``` file not found
+1. **Fatal error: ```'tesseract/baseapi.h'``` file not found**
 
-Make tesseract-includes availble by defining export CPATH="/usr/local/Cellar/tesseract/4.0.0_1/include" and then run the build command.
+Make tesseract-includes availble by defining export ```CPATH="/usr/local/Cellar/tesseract/4.0.0_1/include"``` and then run the build command.
 
-2. Using ```<cmath>``` headers yield error: no member named 'signbit' in the global namespace (macOS)
+2. **Using ```<cmath>``` headers yield error: no member named 'signbit' in the global namespace (macOS)**
 	
 Use the CommandLineTools SDK rather than the XCode.app SDK
 ```
