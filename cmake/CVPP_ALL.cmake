@@ -281,6 +281,10 @@ add_definitions( -DVLFEAT_FOUND )
     link_libraries(
         ${VLFEAT_LIBRARIES}
     )
+	
+	if ( APPLE )
+		execute_process( COMMAND ln -sf ${VLFEAT_LIBRARIES} "./build/libvl.dylib" WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
+	endif ()
 
     message( "############################# VLFeat FOUND!" )
     if( ${VERBOSE} )
@@ -295,9 +299,9 @@ endif()
 if (APPLE)
 	find_library(LZ4_LIBRARIES NAMES liblz4.dylib HINTS "/usr/local/Cellar/lz4/1.9.2/lib/")
 	if(LZ4_LIBRARIES)
-		message("############################# Found: ${LZ4_LIBRARIES}")
+		message("############################# LZ4 FOUND!")
 	else()
-		message("############################# Not found: ${LZ4_LIBRARIES}")
+		message("############################# LZ4 NOT FOUND: ${LZ4_LIBRARIES}")
 		message(FATAL_ERROR "############################# Cannot find required LZ4 libraries")
 	endif()
 	

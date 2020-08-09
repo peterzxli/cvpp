@@ -127,7 +127,7 @@ dyld: Library not loaded: @loader_path/libvl.dylib
   Reason: image not found
 ```
 
-The reason is that ```libvl.dylib``` from the extension VLFEAT is compiled with the library ```install_name``` equal to ```@loader_path/libvl.dylib```. This causes the run-time loader to look for the library in the same directory of the executable. There are two ways around this problem: The first is to install the library in a standard location (e.g. ```/usr/local/lib```) and use the ```otool``` command to change the library ```install_name```. The other is to simply copy the ```libvl.dylib``` file in the executable directory. See [here](http://3dvision.princeton.edu/pvt/SiftFu/SiftFu/SIFTransac/vlfeat/doc/xcode.html) for more details.
+The reason is that ```libvl.dylib``` from the extension VLFeat is compiled with the library ```install_name``` equal to ```@loader_path/libvl.dylib```. This causes the run-time loader to look for the library in the same directory of the executable. There are two ways around this problem: The first is to install the library in a standard location (e.g. ```/usr/local/lib```) and use the ```otool``` command to change the library ```install_name```. The other is to simply copy the ```libvl.dylib``` file in the executable directory. See [here](http://3dvision.princeton.edu/pvt/SiftFu/SiftFu/SIFTransac/vlfeat/doc/xcode.html) for more details.
 
 -----------------------------------------------------------------------------------------
 # *Extensions* <a name="heading--2"/> 
