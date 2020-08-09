@@ -141,6 +141,11 @@ find_package( OpenGL QUIET )
 if( SDL2_FOUND AND GLUT_FOUND AND OPENGL_FOUND )
 add_definitions( -DOPENGL_FOUND )
 
+	if (FALSE)
+		set( OPENGL_INCLUDE_DIR "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/OpenGL.framework/Headers" )
+		set ( OPENGL_LIBRARIES "/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib" )
+	endif ()
+
     include_directories(
         ${SDL2_INCLUDE_DIRS}
         ${OPENGL_INCLUDE_DIR}
@@ -155,7 +160,7 @@ add_definitions( -DOPENGL_FOUND )
     message( "############################# OpenGL FOUND!" )
     if( ${VERBOSE} )
         message( "***** INCLUDE_DIRS: " ${SDL2_INCLUDE_DIRS} " " ${OPENGL_INCLUDE_DIR} )
-        message( "***** LIBRARIES: " SDL2 " " ${GLUT_LIBRARIES} " " ${OPENGL_LIBRARIES} )
+        message( "***** LIBRARIES: " SDL2 " " ${GLUT_LIBRARIES} " OpenGL" ${OPENGL_LIBRARIES} )
     endif()
 else()
     message( "############################# OpenGL **NOT** FOUND!" )
@@ -287,6 +292,24 @@ else()
 endif()
 
 ################################################################
+if (APPLE)
+	message(STATUS "Finding LZ4 libraries")
+	find_library(LZ4_LIBRARIES NAMES liblz4.dylib HINTS "/usr/local/Cellar/lz4/1.9.2/lib/")
+	if(LZ4_LIBRARIES)
+		message(STATUS "Found: ${LZ4_LIBRARIES}")
+	else()
+		message(STATUS "Not found: ${LZ4_LIBRARIES}")
+		message(FATAL_ERROR "Cannot find required LZ4 libraries")
+	endif()
+	
+	macro (add_executable _name)
+	    # invoke built-in add_executable
+	    _add_executable(${ARGV})
+	    if (TARGET ${_name})
+	        target_link_libraries(${_name} ${LZ4_LIBRARIES})
+	    endif()
+	endmacro()
+endif ()
 
+################################################################
 message( "******************************************** CHECKING FOR DEPENDENCIES ... DONE!" )
-

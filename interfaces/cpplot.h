@@ -6,10 +6,20 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_opengl.h>
 
-#include <GL/glu.h>
-#include <GL/glut.h>
-#include <GL/freeglut.h>
-#include <GL/glext.h>
+
+#ifdef __APPLE__
+	#include <OpenGL/glu.h>
+	#include <GLUT/glut.h>
+	#include <openGL/glext.h>
+#else
+	#ifdef _WIN32
+	  #include <windows.h>
+	#endif
+	#include <GL/glu.h>
+	#include <GL/glut.h>
+	#include <GL/freeglut.h>
+	#include <GL/glext.h>
+#endif
 
 #ifdef CUDA_FOUND
 

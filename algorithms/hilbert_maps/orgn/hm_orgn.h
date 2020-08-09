@@ -4,6 +4,10 @@
 #include "./feats/hm_orgn_feat_base.h"
 #include "./regrs/hm_orgn_regr_base.h"
 
+#ifdef __APPLE__
+	#include <random>
+#endif
+
 namespace cvpp
 {
 

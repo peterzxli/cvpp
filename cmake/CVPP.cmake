@@ -15,7 +15,7 @@ message( "****** GCC Version   : " ${CMAKE_CXX_COMPILER_VERSION} )
 ########## CPP
 
 # Change to the folder CVPP is installed
-set( CPP_INCLUDE_DIR "~/cvpp" )
+set( CPP_INCLUDE_DIR "~" )
 include_directories(${CPP_INCLUDE_DIR})
 
 ################################################################

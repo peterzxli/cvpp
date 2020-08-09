@@ -3,9 +3,19 @@
 
 #define GL_GLEXT_PROTOTYPES
 
-#include <GL/glu.h>
-#include <GL/glut.h>
-#include <GL/glext.h>
+#ifdef __APPLE__
+	#include <OpenGL/glu.h>
+	#include <GLUT/glut.h>
+	#include <openGL/glext.h>
+#else
+	#ifdef _WIN32
+	  #include <windows.h>
+	#endif
+	#include <GL/glu.h>
+	#include <GL/glut.h>
+	#include <GL/freeglut.h>
+	#include <GL/glext.h>
+#endif
 
 #include <cvpp/auxiliar/definitions.h>
 #include <cvpp/auxiliar/definitions/definitions_cpplot.h>
