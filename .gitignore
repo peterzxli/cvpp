@@ -2,6 +2,7 @@
 *.user
 *.bag
 *.autosave
+.DS_Store
 build/
 projects/
 TODO/
