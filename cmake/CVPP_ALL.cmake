@@ -293,13 +293,12 @@ endif()
 
 ################################################################
 if (APPLE)
-	message(STATUS "Finding LZ4 libraries")
 	find_library(LZ4_LIBRARIES NAMES liblz4.dylib HINTS "/usr/local/Cellar/lz4/1.9.2/lib/")
 	if(LZ4_LIBRARIES)
-		message(STATUS "Found: ${LZ4_LIBRARIES}")
+		message("############################# Found: ${LZ4_LIBRARIES}")
 	else()
-		message(STATUS "Not found: ${LZ4_LIBRARIES}")
-		message(FATAL_ERROR "Cannot find required LZ4 libraries")
+		message("############################# Not found: ${LZ4_LIBRARIES}")
+		message(FATAL_ERROR "############################# Cannot find required LZ4 libraries")
 	endif()
 	
 	macro (add_executable _name)
