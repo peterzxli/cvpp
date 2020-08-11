@@ -1,3 +1,4 @@
+// This file contains all forward declarations of the matrix class
 #ifndef MATRIX_H
 #define MATRIX_H
 
@@ -21,8 +22,9 @@ protected:
 
 public:
 
-    // Constructor
+    // Constructor (Overloaded)
 
+    // Note: variables as passed by reference (const makes sure that the code cannot modify such reference)
     Matrix();
     Matrix( const String& );
     Matrix( const String& , const int& );

@@ -145,7 +145,7 @@ reboot
 
 ##### DOWNLOAD CUDA TOOLKIT
 
-[https://developer.nvidia.com/cuda-downloads](Link URL)
+[https://developer.nvidia.com/cuda-downloads]
 
 ##### INSTALL CUDA TOOLKIT
 ```
@@ -194,10 +194,11 @@ sudo ./install_GUI.sh
 Note that only OpenCV 3.4.2 is supported for now.
 
 ##### DOWNLOAD OPENCV 3.4.2
-1. OpenCV 3.4.2: [https://github.com/opencv/opencv/releases/tag/3.4.2]
-2. OpenCV Contrib 3.4.2: [https://github.com/opencv/opencv_contrib/releases/tag/3.4.2]
+'''
+git clone https://github.com/peterzxli/opencv-3.4.2.git
+git clone https://github.com/peterzxli/opencv_contrib-3.4.2.git
 
-Unzip both in the home directory.
+'''
 
 ##### RUN CMAKE FOR FIRST CONFIGURATION
 

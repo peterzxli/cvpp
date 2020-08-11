@@ -1,3 +1,4 @@
+// This file contains locations for the definitions of all forward declarations in matrix.h
 
 #include "./matrix/matrix_base.h"
 

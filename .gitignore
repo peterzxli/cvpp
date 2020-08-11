@@ -3,6 +3,7 @@
 *.bag
 *.autosave
 .DS_Store
+cmake-build-debug/
 build/
 projects/
 TODO/

@@ -8,8 +8,9 @@
 
 
 #ifdef __APPLE__
+	#include <OpenGL/OpenGL.h>
 	#include <OpenGL/glu.h>
-	#include <GLUT/glut.h>
+	#include <GLUT/GLUT.h>
 	#include <openGL/glext.h>
 #else
 	#ifdef _WIN32

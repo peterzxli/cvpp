@@ -1,6 +1,7 @@
 //Copyright (C) 2011  Carl Rogers
 //Released under MIT License
 //license available in LICENSE file, or at http://www.opensource.org/licenses/mit-license.php
+//Top level include file
 
 #ifndef LIBCNPY_H_
 #define LIBCNPY_H_
@@ -21,6 +22,10 @@
 #include<algorithm>
 #include<cstring>
 #include<iomanip>
+
+#include<random> //For shuffle method
+#include<chrono> //System timer
+#include<stdexcept>
 
 namespace cnpy {
 

@@ -9,7 +9,7 @@
 namespace cvpp
 {
 
-// COLOR
+// COLOR CONVERSION
 
 inline void
 RGBlsd( const float& v , float& r , float& g , float& b )
@@ -37,6 +37,7 @@ RGBstr( const String& str )
     if( str == "PUR" ) return PUR;
     if( str == "BRO" ) return BRO;
     if( str == "NAV" ) return NAV;
+    else throw "Invalid input value for str";
 }
 
 inline Scalar
@@ -61,6 +62,7 @@ RGBint( const int& i )
         case  9: return Scalar( 0.5 , 0.5 , 0.0 );
         case 10: return Scalar( 0.5 , 0.0 , 0.5 );
         case 11: return Scalar( 0.0 , 0.5 , 0.5 );
+        default: throw "Invalid input value for i";
     }
 }
 
