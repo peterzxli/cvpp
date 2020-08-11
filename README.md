@@ -217,6 +217,7 @@ sudo apt-get install libxvidcore-dev libx264-dev
 sudo apt-get install libgtk-3-dev libxmu-dev 
 sudo apt-get install libatlas-base-dev gfortran
 sudo apt-get install libgstreamer1.0-dev
+sudo apt-get install -y libflann-dev
 ... any others you would like to add ...
 ```
 
