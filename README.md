@@ -197,7 +197,6 @@ Note that only OpenCV 3.4.2 is supported for now.
 ```
 git clone https://github.com/peterzxli/opencv-3.4.2.git
 git clone https://github.com/peterzxli/opencv_contrib-3.4.2.git
-
 ```
 
 ##### RUN CMAKE FOR FIRST CONFIGURATION
